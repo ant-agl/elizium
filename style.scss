@@ -1,0 +1,1291 @@
+@font-face {
+  font-family: "Snowstorm";
+  src: url("./Snowstorm/Snowstorm.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Snowstorm";
+  font-weight: 400;
+}
+
+$colorPink: #f10175;
+$fontFM: "Montserrat";
+body {
+  background-color: black;
+}
+.max-width {
+  margin: auto;
+}
+.center {
+  max-width: 1440px;
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  .contacts {
+    display: flex;
+    gap: 20px;
+    height: 36px;
+  }
+  .number {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    gap: 15px;
+    border-right: 1px solid white;
+  }
+  a {
+    color: var(--pink, #f10175);
+    font-family: Snowstorm;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .messager {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.home {
+  position: relative;
+  height: 491px;
+  .home-img {
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: rotateY(180deg);
+    object-position: 0 60%;
+    width: 100%;
+  }
+  .play-home {
+    position: absolute;
+    bottom: 2%;
+    right: 4.4%;
+  }
+  .main-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 400;
+    height: 100%;
+  }
+  h1 {
+    font-size: 64px;
+
+    position: relative;
+    color: $colorPink;
+    &:after {
+      content: url(./img/home_rebro.svg);
+      position: absolute;
+      left: -10px;
+      bottom: 90px;
+    }
+    &:before {
+      content: url(./img/home_rebro.svg);
+      position: absolute;
+      left: -10px;
+      top: 70px;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    position: relative;
+  }
+}
+
+.title {
+  font-size: 36px;
+  color: $colorPink;
+}
+
+.forma {
+  position: relative;
+  display: flex;
+  margin: 100px 7%;
+  gap: 5%;
+
+  .forma-description {
+    position: relative;
+    .cloud1 {
+      position: absolute;
+      top: -10px;
+      right: 0%;
+    }
+    .planet {
+      position: absolute;
+      bottom: 33px;
+      right: 0%;
+    }
+    .small-stars {
+      position: relative;
+      bottom: -75px;
+      left: -9%;
+      width: 100px;
+      height: 60px;
+      .star1 {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+      .star2 {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+      }
+      .star3 {
+        position: absolute;
+        bottom: 7px;
+        right: 0px;
+      }
+    }
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 66px;
+  }
+  .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 20px;
+    font-family: $fontFM;
+    .list-img {
+      min-width: 87px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .star-top {
+    position: absolute;
+    top: -48px;
+    left: 23%;
+  }
+
+  .forma-title-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    width: 50%;
+    padding-bottom: 70px;
+  }
+  .cloud,
+  .planet,
+  .start-near-cloud,
+  .start-fast,
+  .blin,
+  .star-forma_5,
+  .star-forma_4 {
+    position: absolute;
+  }
+  .cloud {
+    left: -1%;
+    top: 0px;
+  }
+  .planet {
+    right: 3%;
+    bottom: 45px;
+  }
+  .start-near-cloud {
+    top: 75px;
+    left: 33%;
+  }
+  .start-fast {
+    top: 27px;
+    left: 43%;
+  }
+  .blin {
+    left: 19%;
+    bottom: 118px;
+  }
+  .star-forma_5 {
+    right: -60px;
+    bottom: 90px;
+  }
+  .star-forma_4 {
+    right: -115px;
+    bottom: 185px;
+  }
+}
+
+.forma-post {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 430px;
+  position: relative;
+  .forma-post-title {
+    font-size: 26px;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  label {
+    position: relative;
+    img {
+      position: absolute;
+      left: 15px;
+      bottom: 18px;
+    }
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  input[type="date"]:invalid::-webkit-datetime-edit {
+    color: #7f7f7f;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input {
+    background: #36363680;
+    width: 100%;
+    height: 63px;
+    border-radius: 10px;
+    font-size: 14px;
+
+    font-family: $fontFM;
+    border: none;
+    padding-left: 55px;
+    ::placeholder {
+      color: #7f7f7f;
+    }
+  }
+
+  .snapedit {
+    position: absolute;
+    bottom: -83px;
+    right: -15%;
+  }
+  .star-form {
+    position: absolute;
+    top: -25px;
+    right: -15%;
+  }
+}
+.btn {
+  background: #ac1ecd;
+  height: 63px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $fontFM;
+  transition: all 0.5s;
+  &:hover {
+    background: #ae33ca;
+  }
+}
+.just-validate-error-label {
+  position: absolute;
+}
+.wrapper-cards {
+  position: relative;
+  margin: 60px 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  h2 {
+    text-align: center;
+  }
+  .palnetF {
+    position: absolute;
+    left: -27px;
+    top: 0px;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+  position: relative;
+}
+.card {
+  font-family: $fontFM;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s ease-out;
+
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 99.95%);
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inherit;
+    position: absolute;
+    bottom: 38px;
+    left: 15px;
+    transition: bottom 0.5s ease-in-out;
+  }
+
+  .count {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: $fontFM;
+  }
+
+  .main {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .shadow {
+    position: absolute;
+    left: 0px;
+  }
+
+  .wrapper-hide {
+    position: absolute;
+    display: flex;
+    left: 15px;
+    bottom: 28px;
+    flex-direction: column;
+    gap: 11px;
+    bottom: -104px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn {
+    width: 160px;
+    height: 43px;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(172, 30, 205, 1);
+  }
+
+  &:hover {
+    .wrapper-hide {
+      opacity: 1;
+      bottom: 28px;
+    }
+    .card-title {
+      bottom: 104px;
+    }
+  }
+  .description {
+    display: none;
+  }
+}
+.card-hidden {
+  animation-name: card;
+  animation-duration: 0.5s;
+}
+@keyframes card {
+  from {
+    width: 0%;
+    transform: scale(0.5) rotate(180deg);
+  }
+  to {
+    height: 100%;
+
+    transform: scale(1) rotate(0deg);
+  }
+}
+.cards-button {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: $fontFM;
+  font-weight: 500;
+  display: none;
+}
+
+$modal-background-color: rgba(0, 0, 0, 0.6);
+$modal-content-background: white;
+$modal-border-radius: 20px;
+$transition-duration: 0.3s;
+
+.wrapped-modal-card {
+  background: $modal-background-color;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  font-family: $fontFM;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-duration ease,
+    visibility $transition-duration ease;
+  z-index: 99;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-card {
+    max-width: 598px;
+    max-height: 433px;
+    border-radius: $modal-border-radius;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform $transition-duration ease;
+
+    &.active {
+      transform: scale(1);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 99.95%);
+    }
+
+    .modal-wrapper-text {
+      position: absolute;
+      left: 22px;
+      right: 30px;
+      bottom: 27px;
+
+      .modal-card-title {
+        font-family: $fontFM;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .modal-card-count {
+        font-family: $fontFM;
+        font-size: 15px;
+      }
+
+      .modal-card-description {
+        font-family: $fontFM;
+        font-size: 20px;
+        margin-top: 17px;
+      }
+    }
+
+    .modal-card-cross {
+      position: absolute;
+      max-width: 14px;
+      max-height: 14px;
+      top: 76px;
+      right: 18px;
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+}
+
+.away-quest {
+  margin: 130px 7%;
+  position: relative;
+
+  .picrures {
+    display: none;
+  }
+  h2 {
+    text-align: center;
+    margin: 91px 0;
+  }
+  .rocket {
+    position: absolute;
+    width: 671px;
+    left: 21%;
+    top: 74px;
+  }
+  .planet-answer {
+    position: absolute;
+    top: -155px;
+    right: -8%;
+  }
+}
+
+.wrapper-answer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer-position {
+  max-width: 386px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+  h3 {
+    font-size: 32px;
+    margin: 17px 0;
+  }
+  .answer-description {
+    font-size: 20px;
+    font-family: $fontFM;
+  }
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  .planet,
+  .star1,
+  .star2,
+  .star-fast {
+    position: absolute;
+  }
+  .planet {
+    left: 14%;
+    top: 48px;
+  }
+  .star1 {
+    left: 11%;
+    top: 147px;
+  }
+  .star2 {
+    left: 8%;
+    top: 60px;
+  }
+  .star-fast {
+    right: 0%;
+    top: 40px;
+  }
+}
+
+.swiper {
+  position: relative;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-wrapper {
+  max-width: 800px;
+  max-height: 600px;
+
+  position: static;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  position: absolute;
+  top: 60%;
+}
+.swiper-button-next {
+  right: 18%;
+}
+.swiper-button-prev {
+  left: 18%;
+}
+
+.game {
+  width: 100%;
+  position: relative;
+  margin: 296px 0;
+  max-height: 480px;
+  .pictures-mini {
+    display: none;
+  }
+  .waves {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .waves2 {
+    display: none;
+  }
+  .wave-bottom {
+    position: absolute;
+    top: 41px;
+    left: 0px;
+  }
+  h2 {
+    text-align: center;
+    position: absolute;
+    top: -160px;
+    width: 100%;
+  }
+  .wrapper-top {
+    position: absolute;
+    left: 3.2%;
+    top: -65px;
+    display: flex;
+    gap: 250px;
+  }
+  .wrapper-bottom {
+    position: absolute;
+    left: 18.2%;
+    bottom: -210px;
+    display: flex;
+    gap: 262px;
+  }
+  .game-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 200px;
+  }
+  .game-img {
+    border-radius: 50%;
+    height: 200px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.25);
+    }
+  }
+  .title-game-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 31px;
+  }
+  .count {
+    font-size: 64px;
+  }
+  .title-game {
+    font-size: 24px;
+  }
+  .game-description {
+    font-size: 12px;
+    font-family: $fontFM;
+  }
+  .cloud,
+  .planet,
+  .star-big_left,
+  .star-big-right,
+  .star-small,
+  .star-fast {
+    position: absolute;
+  }
+
+  .cloud {
+    left: 11%;
+    top: -108px;
+  }
+  .planet {
+    right: 2%;
+    top: -250px;
+  }
+  .star-big_left {
+    left: 13%;
+    bottom: 42px;
+  }
+  .star-big-right {
+    right: 21%;
+    bottom: 42px;
+  }
+  .star-small {
+    right: 25%;
+    bottom: 10px;
+  }
+  .star-fast {
+    right: 36%;
+    top: 25px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 76px 18% 252px 13.5%;
+  border-top: 1px solid white;
+  p {
+    font-size: 12px;
+    font-family: $fontFM;
+    max-width: 960px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .card {
+    .card-title {
+      font-size: 16px;
+    }
+  }
+  .wrapper-cards {
+    position: relative;
+    margin: 30px 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .away-quest .rocket {
+    width: 500px;
+    left: 18%;
+    top: 31%;
+  }
+  .swiper-button-next {
+    right: 6%;
+  }
+  .swiper-button-prev {
+    left: 6%;
+  }
+  .game {
+    .game-block {
+      max-width: 150px;
+      justify-content: center;
+    }
+    .game-img {
+      max-width: 125px;
+      max-height: 125px;
+    }
+    .wrapper-top {
+      gap: 170px;
+      top: -18px;
+      left: 2.2%;
+    }
+    .wrapper-bottom {
+      gap: 175px;
+      bottom: -190px;
+    }
+    .count {
+      font-size: 38px;
+    }
+    .title-game {
+      font-size: 14px;
+      padding-right: 25px;
+    }
+    .title-game-wrapper {
+      margin-top: 10px;
+      gap: 5px;
+    }
+    .game-description {
+      font-size: 10px;
+    }
+  }
+  .stars-bottom-pictures {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .title {
+    font-size: 18px;
+  }
+
+  header {
+    .logo {
+      max-height: 44px;
+    }
+    .contacts {
+      gap: 10px;
+      height: auto;
+      align-items: center;
+    }
+    a {
+      font-size: 14px;
+    }
+    .number {
+      max-height: 11px;
+      gap: 5px;
+      padding-right: 10px;
+      img {
+        max-height: inherit;
+      }
+    }
+    .messager {
+      gap: 5px;
+      img {
+        max-height: 18px;
+      }
+    }
+  }
+  .home {
+    height: 182px;
+    .play-home {
+      max-width: 32px;
+      img {
+        max-width: inherit;
+      }
+    }
+    h1 {
+      font-size: 19px;
+      &:before,
+      &:after {
+        content: url("./img/rebro_home_mini.svg");
+        left: -2%;
+      }
+      &:after {
+        bottom: 20px;
+      }
+      &:before {
+        top: 15px;
+      }
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+  .forma {
+    flex-direction: column;
+    margin: 30px 0%;
+    overflow-x: clip;
+    gap: 0px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .lists {
+      gap: 14px;
+      padding: 0 5px;
+      width: fit-content;
+      margin: auto;
+    }
+    .list {
+      font-size: 12px;
+      gap: 15px;
+      .list-img {
+        max-width: 35px;
+        min-width: auto;
+        img {
+          max-width: inherit;
+        }
+      }
+    }
+
+    .cloud1 {
+      max-width: 65px;
+      right: 16% !important;
+    }
+    .star-form {
+      display: none;
+    }
+    .snapedit {
+      top: -20px;
+      right: 14% !important;
+      max-width: 12px;
+    }
+    .planet {
+      max-width: 51px;
+      bottom: 15px !important;
+      right: -8px !important;
+    }
+    .small-stars {
+      height: 27px !important;
+      max-width: 18px;
+      left: 0% !important;
+      top: -185px;
+      .star1 {
+        max-width: 18px;
+        top: 0px;
+      }
+      .star2 {
+        max-width: 9px;
+        top: 15px !important;
+        right: -12px !important;
+      }
+      .star3 {
+        display: none;
+      }
+    }
+    .star-top {
+      max-width: 45px;
+      top: 196px !important;
+      left: 10% !important;
+      transform: rotateY(180deg);
+    }
+    .forma-post-title {
+      font-size: 15px;
+      margin: auto;
+      max-width: 187px;
+      display: flex;
+      text-align: center;
+    }
+    .pictures {
+      display: none;
+    }
+    .forma-title-text {
+      font-size: 15px;
+      text-align: center;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  .forma-post {
+    min-width: 336px;
+    margin: auto;
+    gap: 18px;
+    input {
+      height: 50px;
+    }
+    .input-container {
+      gap: 10px;
+      img {
+        max-width: 20px;
+        bottom: 14px !important;
+      }
+    }
+  }
+  .just-validate-error-label {
+    font-size: 12px;
+  }
+  .btn {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-title {
+    font-size: 18px !important;
+  }
+
+  .away-quest {
+    margin: 40px 4px;
+    overflow-x: hidden;
+    .rocket {
+      top: 0px;
+    }
+    .planet-answer {
+      max-height: 105px;
+      top: 45px;
+    }
+    h2 {
+      margin: 20px 0;
+    }
+  }
+  .answer-position {
+    .answer {
+      width: 175px;
+    }
+    h3 {
+      font-size: 15px;
+      margin: 10px 0;
+    }
+    .answer-description {
+      font-size: 12px;
+    }
+  }
+  .swiper-wrapper {
+    max-width: 420px;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .game {
+    margin-top: 195px;
+    margin-bottom: 250px;
+    max-height: max-content;
+    .waves {
+      display: none;
+    }
+    .waves2 {
+      display: flex;
+      justify-content: center;
+    }
+    .wrapper-top,
+    .wrapper-bottom {
+      flex-direction: column;
+    }
+    .wrapper-bottom {
+      left: 54%;
+      top: 93px;
+      gap: 22px;
+    }
+    .wrapper-top {
+      gap: 53px;
+      top: -73px;
+      left: 26%;
+    }
+    .wave-bottom {
+      top: 20px;
+    }
+    .planet {
+      max-width: 94px;
+      top: -55px;
+    }
+    .cloud {
+      display: none;
+    }
+    .star-fast {
+      max-height: 34px;
+      right: 42%;
+      top: 80px;
+    }
+    .star-big_left {
+      max-width: 18px;
+      left: 44%;
+      bottom: 222px;
+    }
+    .star-big-right {
+      display: none;
+    }
+    .star-small {
+      max-width: 12px;
+      left: 31%;
+      bottom: 200px;
+    }
+    .game-block {
+      align-items: center;
+    }
+    .pictures-mini {
+      display: block;
+      position: relative;
+      max-height: 150px;
+      max-width: 150px;
+      bottom: -887px;
+      left: 30%;
+      img {
+        position: absolute;
+      }
+      .planet {
+        left: 0;
+        bottom: 0;
+      }
+      .star-blin {
+        right: 27%;
+        top: -95px;
+      }
+      .star-blin_rever {
+        max-width: 19px;
+        transform: rotateY(-180deg);
+        right: 13%;
+        top: -55px;
+      }
+      .star_big {
+        max-width: 10px;
+        right: 0%;
+        top: -100px;
+      }
+      .star_smal1 {
+        max-width: 7px;
+        right: 36%;
+        top: -40px;
+      }
+      .star_smal2 {
+        max-width: 7px;
+        right: 9%;
+        top: -0px;
+      }
+      .star-blin-main {
+        top: -1057px;
+        left: -8%;
+      }
+      .star-long1 {
+        max-height: 15px;
+        top: -961px;
+        left: 135%;
+      }
+      .star-long2 {
+        top: -911px;
+        left: 122%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 430px) {
+  .home {
+    overflow: hidden;
+    .home-img {
+      transform: rotateY(180deg) scaleY(1.5) scaleX(1.5);
+
+      object-position: 1% 63%;
+    }
+  }
+  .cards-button {
+    display: block;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wrapper-cards {
+    margin: 30px 47px;
+    .palnetF {
+      display: none;
+    }
+  }
+
+  .answer-position {
+    gap: 102px;
+
+    .answer {
+      width: 175px;
+    }
+    &:nth-child(2) {
+      margin-top: 110px;
+    }
+  }
+
+  .away-quest {
+    .picrures {
+      position: relative;
+      display: flex;
+      width: 100%;
+      img {
+        position: absolute;
+      }
+    }
+    .cloud {
+      top: 190px;
+      left: 62px;
+    }
+    .snap_top {
+      right: 38%;
+      top: 75px;
+    }
+    .snap_top-mini {
+      max-height: 18px;
+      right: 27%;
+      top: 115px;
+    }
+    .snap_cloud-mini {
+      max-height: 18px;
+      left: 12%;
+      top: 190px;
+    }
+    .snap-bottom {
+      left: 35%;
+      top: 625px;
+    }
+    .saturn {
+      left: -1%;
+      top: 572px;
+    }
+    .star-fast {
+      right: 0%;
+      top: 285px;
+    }
+    .planeta-bul {
+      right: 13%;
+      top: 475px;
+    }
+    .planeta_depression {
+      left: 28%;
+      top: 390px;
+    }
+    .star_five {
+      left: 7%;
+      top: 390px;
+    }
+    .star_five-mini_one {
+      max-height: 12px;
+      left: 18%;
+      top: 425px;
+    }
+    .star_five-mini_two {
+      max-height: 12px;
+      right: 2%;
+      top: 470px;
+    }
+    .rocket {
+      display: none;
+    }
+  }
+  .swiper-wrapper {
+    max-width: 256px;
+  }
+  .swiper-button-next {
+    right: 4%;
+
+    &:after {
+      font-size: 14px;
+    }
+  }
+  .swiper-button-prev {
+    left: 4%;
+    &:after {
+      font-size: 14px;
+    }
+  }
+  .slider {
+    .star2,
+    .star-fast,
+    .star1,
+    .planet {
+      display: none;
+    }
+  }
+  .game {
+    .wrapper-top {
+      left: 14px;
+    }
+    .pictures-mini {
+      left: 8%;
+    }
+  }
+
+  .wrapped-modal-card {
+    overflow: hidden;
+    .modal-card {
+      max-width: 320px;
+    }
+    .modal-card-title {
+      font-size: 18px !important;
+    }
+    .modal-card-count {
+      font-size: 12px;
+    }
+    .modal-card-description {
+      font-size: 10px !important;
+      margin-top: 7px !important;
+    }
+  }
+  .away-quest .planet-answer {
+    right: -5%;
+  }
+  .forma-post {
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .answer-position .answer {
+    width: auto;
+  }
+  .away-quest .cloud {
+    left: 43px;
+  }
+  .game .wrapper-top {
+    left: 3px;
+    top: -80px;
+  }
+}
